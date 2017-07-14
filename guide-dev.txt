@@ -1,0 +1,12 @@
+# npm remove mongoose
+# npm install mongoose@4.10.8 --save
+
+// run server always
+~# forever --minUptime 5 --spinSleepTime 5 start /home/jgravity/presentation-vote/bin/www
+// check
+~# forever list
+// stop
+~# forever stop /home/jgravity/presentation-vote/bin/www
+
+// to use port 80
+$ sudo npm start
