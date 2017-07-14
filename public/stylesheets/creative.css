@@ -5,12 +5,12 @@
  */
 
 /* customized part - start */
-#homeHeading {
+/* #homeHeading {
   font-size: 96px;
-}
+} */
 
 /* customized part - end */
-html,
+/* html,
 body {
   height: 100%;
   width: 100%;
@@ -162,9 +162,9 @@ header {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 1); */
   /* header.jpg reference : https://unsplash.com/photos/iwWJFIlnDm4, bright -80% */
-  text-align: center;
+  /* text-align: center;
   color: white;
 }
 header .header-content {
@@ -421,4 +421,4 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: #222222;
-}
+} */
