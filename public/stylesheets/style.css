@@ -50,64 +50,6 @@ table textarea:focus {
   outline: none;
 }
 
-.user_teams input {
-  display: none;
-}
-
-.user_teams label {
-  width: 20%;
-  margin: 0px;
-  padding: 0px;
-  display: block;
-  float: left;
-  height: 100px;
-}
-
-.user_teams label:nth-child(2) {
-  border: 10px solid red;
-}
-
-.user_teams input:nth-child(1):checked + label {
-  border: 10px solid rgba(255, 255, 255, 0.5);
-  background-color: red;
-}
-
-.user_teams label:nth-child(4) {
-  border: 10px solid green;
-}
-
-.user_teams input:nth-child(3):checked + label {
-  border: 10px solid rgba(0, 255, 0, 0.5);
-  background-color: green;
-}
-
-.user_teams label:nth-child(6) {
-  border: 10px solid blue;
-}
-
-.user_teams input:nth-child(5):checked + label {
-  border: 10px solid rgba(0, 0, 255, 0.5);
-  background-color: blue;
-}
-
-.user_teams label:nth-child(8) {
-  border: 10px solid yellow;
-}
-
-.user_teams input:nth-child(7):checked + label {
-  border: 10px solid rgba(255, 255, 0, 0.5);
-  background-color: yellow;
-}
-
-.user_teams label:nth-child(10) {
-  border: 10px solid skyblue;
-}
-
-.user_teams input:nth-child(9):checked + label {
-  border: 10px solid rgba(0, 0, 125, 0.5);
-  background-color: skyblue;
-}
-
 
 
 #user_name {

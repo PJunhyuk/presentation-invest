@@ -9,21 +9,8 @@
             $(document).ready(function() {
                 //메모 쓰기 요청을 처리하는 부분입니다.
                 var write = function(contents) {
-                    var user_team;
-                    if ($("#user_team1").is(":checked"))
-                        user_team = 'color1';
-                    if ($("#user_team2").is(":checked"))
-                        user_team = 'color2';
-                    if ($("#user_team3").is(":checked"))
-                        user_team = 'color3';
-                    if ($("#user_team4").is(":checked"))
-                        user_team = 'color4';
-                    if ($("#user_team5").is(":checked"))
-                        user_team = 'color5';
-
                     var postdata = {
                         'user_name': $("#user_name").val(),
-                        'user_team': user_team,
                         'user_phone': $("#user_phone").val(),
                         'user_invest1': $("#user_invest1").val(),
                         'user_invest2': $("#user_invest2").val(),
@@ -90,21 +77,6 @@
                         <td><input id='user_invest3' class='user_invest' type='text' placeholder='Type here' /></td>
                         <td><input id='user_invest4' class='user_invest' type='text' placeholder='Type here' /></td>
                         <td><input id='user_invest5' class='user_invest' type='text' placeholder='Type here' /></td>
-                    </tr>
-                    <tr>
-                        <th>USER CHOISE</th>
-                        <td class="user_teams">
-                            <input name="user_team" id="user_team1" type="radio" value="color1" checked />
-                            <label for="user_team1"></label>
-                            <input name="user_team" id="user_team2" type="radio" value="color2" />
-                            <label for="user_team2"></label>
-                            <input name="user_team" id="user_team3" type="radio" value="color3" />
-                            <label for="user_team3"></label>
-                            <input name="user_team" id="user_team4" type="radio" value="color4" />
-                            <label for="user_team4"></label>
-                            <input name="user_team" id="user_team5" type="radio" value="color5" />
-                            <label for="user_team5"></label>
-                        </td>
                     </tr>
                     <tr>
                         <th>USER NOTES</th>

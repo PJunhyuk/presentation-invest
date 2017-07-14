@@ -12,7 +12,6 @@ var Blend = new Schema({
 	user_invest3: Number,
 	user_invest4: Number,
 	user_invest5: Number,
-	user_team: String,
 	contents: String,
 	date: Date
 });
@@ -35,7 +34,6 @@ exports.load = function(req, res) {
 //메모 쓰기 요청을 처리합니다.
 exports.write = function(req, res) {
 	var user_name = req.body.user_name;
-	var user_team = req.body.user_team;
 	var user_phone = req.body.user_phone;
 	var user_invest1 = req.body.user_invest1;
 	var user_invest2 = req.body.user_invest2;
@@ -49,7 +47,6 @@ exports.write = function(req, res) {
 	var blend = new blendModel();
 
 	blend.user_name = user_name;
-	blend.user_team = user_team;
 	blend.user_phone = user_phone;
 	blend.user_invest1 = user_invest1;
 	blend.user_invest2 = user_invest2;
