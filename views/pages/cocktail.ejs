@@ -33,14 +33,20 @@
                         $("#cocktail_contents").text(this.contents);
                         $("#cocktail_date").text(this.date);
 
-                        if(this.app_color == 'color1') {
+                        if(this.user_team == 'color1') {
                             $('#cocktail_body').css("background-color", "red");
                         }
-                        if(this.app_color == 'color2') {
+                        if(this.user_team == 'color2') {
                             $('#cocktail_body').css("background-color", "green");
                         }
-                        if(this.app_color == 'color3') {
+                        if(this.user_team == 'color3') {
                             $('#cocktail_body').css("background-color", "blue");
+                        }
+                        if(this.user_team == 'color4') {
+                            $('#cocktail_body').css("background-color", "yellow");
+                        }
+                        if(this.user_team == 'color5') {
+                            $('#cocktail_body').css("background-color", "sky-blue");
                         }
 
                         return;

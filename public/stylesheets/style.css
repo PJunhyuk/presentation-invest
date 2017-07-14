@@ -50,13 +50,12 @@ table textarea:focus {
   outline: none;
 }
 
-
-.app_colors input {
+.user_teams input {
   display: none;
 }
 
-.app_colors label {
-  width: 33.33%;
+.user_teams label {
+  width: 20%;
   margin: 0px;
   padding: 0px;
   display: block;
@@ -64,76 +63,51 @@ table textarea:focus {
   height: 100px;
 }
 
-.app_colors label:nth-child(2) {
+.user_teams label:nth-child(2) {
   border: 10px solid red;
 }
 
-.app_colors input:nth-child(1):checked + label {
+.user_teams input:nth-child(1):checked + label {
   border: 10px solid rgba(255, 255, 255, 0.5);
   background-color: red;
 }
 
-.app_colors label:nth-child(4) {
+.user_teams label:nth-child(4) {
   border: 10px solid green;
 }
 
-.app_colors input:nth-child(3):checked + label {
+.user_teams input:nth-child(3):checked + label {
   border: 10px solid rgba(0, 255, 0, 0.5);
   background-color: green;
 }
 
-.app_colors label:nth-child(6) {
+.user_teams label:nth-child(6) {
   border: 10px solid blue;
 }
 
-.app_colors input:nth-child(5):checked + label {
+.user_teams input:nth-child(5):checked + label {
   border: 10px solid rgba(0, 0, 255, 0.5);
   background-color: blue;
 }
 
-
-.app_functions input {
-  display: none;
+.user_teams label:nth-child(8) {
+  border: 10px solid yellow;
 }
 
-.app_functions label {
-  width: 33.33%;
-  margin: 0px;
-  padding: 0px;
-  display: block;
-  float: left;
-  height: 100px;
-  font-size: 24px;
-  line-height: 75px;
-  /*vertical-align: middle;*/
+.user_teams input:nth-child(7):checked + label {
+  border: 10px solid rgba(255, 255, 0, 0.5);
+  background-color: yellow;
 }
 
-.app_functions label:nth-child(2) {
-  border: 10px solid rgba(255, 255, 255, 0.3);
+.user_teams label:nth-child(10) {
+  border: 10px solid skyblue;
 }
 
-.app_functions input:nth-child(1):checked + label {
-  border: 10px solid rgb(255, 255, 255);
-  background-color: rgba(255, 255, 255, 0.3);
+.user_teams input:nth-child(9):checked + label {
+  border: 10px solid rgba(0, 0, 125, 0.5);
+  background-color: skyblue;
 }
 
-.app_functions label:nth-child(4) {
-  border: 10px solid rgba(255, 255, 255, 0.3);
-}
-
-.app_functions input:nth-child(3):checked + label {
-  border: 10px solid rgb(255, 255, 255);
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-.app_functions label:nth-child(6) {
-  border: 10px solid rgba(255, 255, 255, 0.3);
-}
-
-.app_functions input:nth-child(5):checked + label {
-  border: 10px solid rgb(255, 255, 255);
-  background-color: rgba(255, 255, 255, 0.3);
-}
 
 
 #user_name {
@@ -150,8 +124,18 @@ table textarea:focus {
   outline: none;
 }
 
-.app_color {
-  width:
+#user_phone {
+  width: 100%;
+  height: 100px;
+  color: white;
+  font-size: 24px;
+  background: none;
+  padding-left: 30px;
+  border: none;
+}
+
+#user_phone:focus {
+  outline: none;
 }
 
 #write_button {

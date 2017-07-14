@@ -162,7 +162,7 @@ header {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image: url('/images/header.jpg');
+  background-color: rgba(0, 0, 0, 1);
   /* header.jpg reference : https://unsplash.com/photos/iwWJFIlnDm4, bright -80% */
   text-align: center;
   color: white;
