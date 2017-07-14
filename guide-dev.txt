@@ -1,6 +1,5 @@
-// to solove mongoose problem
-# npm remove mongoose
-# npm install mongoose@4.10.8 --save
+// ssh
+$ ssh root@blenderkit.com
 
 // run server always
 ~# forever --minUptime 5 --spinSleepTime 5 start /home/jgravity/presentation-vote/bin/www
@@ -9,13 +8,15 @@
 // stop
 ~# forever stop /home/jgravity/presentation-vote/bin/www
 
-// to use port 80
+// local: run db
+$ mongod --dbpath db-local
+
+// local: to use port 80
 $ sudo npm start
 
-// run server always
-~# forever --minUptime 5 --spinSleepTime 5 start /home/jgravity/presentation-vote/bin/www
-// check
-~# forever list
-// stop
-~# forever stop /home/jgravity/blenderkit/bin/www
+-------------------
+
+// to solve mongoose problem
+# npm remove mongoose
+# npm install mongoose@4.10.8 --save
 

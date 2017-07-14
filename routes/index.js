@@ -16,20 +16,4 @@ router.get('/blended/list', function(req, res, next) {
   res.render('pages/blended-list', { title: 'presentation_vote' });
 });
 
-router.get('/cocktail', function(req, res, next) {
-  res.render('pages/cocktail', { title: 'presentation_vote' });
-});
-
-var sample = {user_name: ''};
-router.get('/cocktail/:user_name', function(req, res) {
-  sample.user_name = req.params.user_name;
-  res.render('pages/cocktail', { title: 'presentation_vote', user_name: sample.user_name });
-});
-
-// exports.geturl = function(url){
-//   router.get('/cocktail/' + url, function(req, res, next) {
-//     res.render('pages/cocktail', { title: 'presentation_vote' });
-//   });
-// };
-
 module.exports = router;
