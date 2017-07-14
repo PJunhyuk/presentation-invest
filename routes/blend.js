@@ -8,6 +8,10 @@ var Blend = new Schema({
 	user_name: String,
 	user_phone: String,
 	user_invest1: Number,
+	user_invest2: Number,
+	user_invest3: Number,
+	user_invest4: Number,
+	user_invest5: Number,
 	user_team: String,
 	contents: String,
 	date: Date
@@ -34,6 +38,10 @@ exports.write = function(req, res) {
 	var user_team = req.body.user_team;
 	var user_phone = req.body.user_phone;
 	var user_invest1 = req.body.user_invest1;
+	var user_invest2 = req.body.user_invest2;
+	var user_invest3 = req.body.user_invest3;
+	var user_invest4 = req.body.user_invest4;
+	var user_invest5 = req.body.user_invest5;
 
 	var contents = req.body.contents;
 	var date = Date.now();
@@ -44,6 +52,10 @@ exports.write = function(req, res) {
 	blend.user_team = user_team;
 	blend.user_phone = user_phone;
 	blend.user_invest1 = user_invest1;
+	blend.user_invest2 = user_invest2;
+	blend.user_invest3 = user_invest3;
+	blend.user_invest4 = user_invest4;
+	blend.user_invest5 = user_invest5;
 	blend.contents = contents;
 	blend.date = date;
 	blend.comments = [];
