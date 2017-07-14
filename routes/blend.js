@@ -6,8 +6,9 @@ var Schema = mongoose.Schema;
 //메모 모델을 정의합니다.
 var Blend = new Schema({
 	user_name: String,
-	user_team: String,
 	user_phone: String,
+	user_invest1: Number,
+	user_team: String,
 	contents: String,
 	date: Date
 });
@@ -32,6 +33,7 @@ exports.write = function(req, res) {
 	var user_name = req.body.user_name;
 	var user_team = req.body.user_team;
 	var user_phone = req.body.user_phone;
+	var user_invest1 = req.body.user_invest1;
 
 	var contents = req.body.contents;
 	var date = Date.now();
@@ -41,6 +43,7 @@ exports.write = function(req, res) {
 	blend.user_name = user_name;
 	blend.user_team = user_team;
 	blend.user_phone = user_phone;
+	blend.user_invest1 = user_invest1;
 	blend.contents = contents;
 	blend.date = date;
 	blend.comments = [];

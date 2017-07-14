@@ -25,15 +25,13 @@
                         'user_name': $("#user_name").val(),
                         'user_team': user_team,
                         'user_phone': $("#user_phone").val(),
+                        'user_invest1': $("#user_invest1").val(),
                         'contents': contents
                     };
 
                     $.post('/write', postdata, function() {
                         // load();
                     });
-
-                    alert("App created! (username : " + $("#user_name").val() + ")");
-                    alert("Check it at http://blenderkit.com/blended/list");
                 };
 
                 //화면 상단에서 새로운 메모를 작성하고 엔터키를 쳤을 때 쓰기 요청을 발생시키기 위한 부분입니다.
@@ -51,7 +49,13 @@
 
                 //쓰기 버튼을 눌렀을 때 쓰기 요청을 발생시키기 위한 부분입니다.
                 $("#write_button").click(function(evt) {
-                    write($("#write textarea").val());
+                    if ($("#user_invest1").val() != 100) {
+                        alert("ERROR!");
+                    } else {
+                        alert("App created! (username : " + $("#user_name").val() + ")");
+                        alert("Check it at http://blenderkit.com/blended/list");
+                        write($("#write textarea").val());
+                    }
                 });
             });
         </script>
@@ -72,6 +76,10 @@
                     <tr>
                         <th>USER PHONE</th>
                         <td><input id='user_phone' class='user_phone' type='text' placeholder='Type here' /></td>
+                    </tr>
+                    <tr>
+                        <th>USER INVEST1</th>
+                        <td><input id='user_invest1' class='user_invest1' type='text' placeholder='Type here' /></td>
                     </tr>
                     <tr>
                         <th>USER CHOISE</th>

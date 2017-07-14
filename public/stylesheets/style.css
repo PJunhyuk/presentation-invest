@@ -138,6 +138,20 @@ table textarea:focus {
   outline: none;
 }
 
+#user_invest1 {
+  width: 100%;
+  height: 100px;
+  color: white;
+  font-size: 24px;
+  background: none;
+  padding-left: 30px;
+  border: none;
+}
+
+#user_invest1:focus {
+  outline: none;
+}
+
 #write_button {
   margin: 0;
   padding: 0;
