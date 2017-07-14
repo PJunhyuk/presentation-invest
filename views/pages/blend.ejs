@@ -18,19 +18,20 @@
                         app_color = 'color3';
 
                     var postdata = {
-                        'app_title': $("#app_title").val(),
+                        'user_name': $("#user_name").val(),
                         'app_function1': $("input[name=app_function1]").is(":checked"),
                         'app_function2': $("input[name=app_function2]").is(":checked"),
                         'app_function3': $("input[name=app_function3]").is(":checked"),
                         'app_color': app_color,
+                        'user_phone': $("#user_phone").val(),
                         'contents': contents
                     };
 
                     $.post('/write', postdata, function() {
-                        load();
+                        // load();
                     });
 
-                    alert("App created! (title : " + $("#app_title").val() + ")");
+                    alert("App created! (username : " + $("#user_name").val() + ")");
                     alert("Check it at http://blenderkit.com/blended/list");
                 };
 
@@ -64,8 +65,12 @@
                         <th colspan="2">Blend your own app!</th>
                     </tr>
                     <tr>
-                        <th>App Title</th>
-                        <td><input id='app_title' class='app_title' type='text' placeholder='Type here' /></td>
+                        <th>USER NAME</th>
+                        <td><input id='user_name' class='user_name' type='text' placeholder='Type here' /></td>
+                    </tr>
+                    <tr>
+                        <th>USER PHONE</th>
+                        <td><input id='user_phone' class='user_phone' type='text' placeholder='Type here' /></td>
                     </tr>
                     <tr>
                         <th>App Functions</th>

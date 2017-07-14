@@ -14,22 +14,22 @@
             //   $(this).tab('show')
             // })
 
-            var input_app_title = $('#cocktail_input').text();
-            search_data(input_app_title);
+            var input_user_name = $('#cocktail_input').text();
+            search_data(input_user_name);
 
         });
 
-        function search_data(input_app_title) {
+        function search_data(input_user_name) {
             $.get('/load', (data) => {
                 $(data).each(function(i) {
-                    var app_title = this.app_title;
-                    if(input_app_title == app_title){
+                    var user_name = this.user_name;
+                    if(input_user_name == user_name){
                         $('#not_matching').hide();
                         $('#matching').show();
 
                         $("#blend").prepend("<div class='item'></div>");
 
-                        $("#cocktail_title").text(this.app_title);
+                        $("#cocktail_username").text(this.user_name);
                         $("#cocktail_contents").text(this.contents);
                         $("#cocktail_date").text(this.date);
 
@@ -60,7 +60,7 @@
         }
     </script>
     <style>
-    #cocktail_title {
+    #cocktail_username {
         margin-top: 30px;
         font-size: 36px;
         text-align: center;
@@ -74,14 +74,14 @@
 </head>
 
 <body id="cocktail_body">
-    <p id="cocktail_input"><%= app_title %></p>
+    <p id="cocktail_input"><%= user_name %></p>
     <div id="not_matching">
         <h1>NOT MATCHING</h1>
     </div>
     <div id="matching">
         <div class="container">
             <div class="row">
-                <div class="panel panel-success col-xs-offset-1 col-xs-10" id="cocktail_title">
+                <div class="panel panel-success col-xs-offset-1 col-xs-10" id="cocktail_username">
                 </div>
             </div>
             <div class="row">

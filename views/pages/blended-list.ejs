@@ -18,8 +18,9 @@
 
                             $("#blend").prepend("<div class='item'></div>");
 
-                            $("#blend .item:first").append("<div class='app_title'><b>" + this.app_title + "</b> (" + this.date +
+                            $("#blend .item:first").append("<div class='user_name'><b>" + this.user_name + "</b> (" + this.date +
                                 ")&nbsp;&nbsp; | <span class='text_button del'>DELETE</span></div>");
+                            $("#blend .item:first").append("<div class='contents " + id + "'>" + this.user_phone + "</div>");
                             $("#blend .item:first").append("<div class='contents " + id + "'>" + this.contents + "</div>");
                             $("#blend .item:first").append("<div class='app_function '>" + this.app_function1 + "</div>");
                             $("#blend .item:first").append("<div class='app_function '>" + this.app_function2 + "</div>");

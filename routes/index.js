@@ -20,10 +20,10 @@ router.get('/cocktail', function(req, res, next) {
   res.render('pages/cocktail', { title: 'presentation_vote' });
 });
 
-var sample = {app_title: ''};
-router.get('/cocktail/:app_title', function(req, res) {
-  sample.app_title = req.params.app_title;
-  res.render('pages/cocktail', { title: 'presentation_vote', app_title: sample.app_title });
+var sample = {user_name: ''};
+router.get('/cocktail/:user_name', function(req, res) {
+  sample.user_name = req.params.user_name;
+  res.render('pages/cocktail', { title: 'presentation_vote', user_name: sample.user_name });
 });
 
 // exports.geturl = function(url){

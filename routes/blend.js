@@ -10,6 +10,7 @@ var Blend = new Schema({
 	app_function2: Boolean,
 	app_function3: Boolean,
 	app_color: String,
+	user_phone: String,
 	contents: String,
 	date: Date
 });
@@ -36,6 +37,7 @@ exports.write = function(req, res) {
 	var app_function2 = req.body.app_function2;
 	var app_function3 = req.body.app_function3;
 	var app_color = req.body.app_color;
+	var user_phone = req.body.user_phone;
 
 	var contents = req.body.contents;
 	var date = Date.now();
@@ -47,6 +49,7 @@ exports.write = function(req, res) {
 	blend.app_function2 = app_function2;
 	blend.app_function3 = app_function3;
 	blend.app_color = app_color;
+	blend.user_phone = user_phone;
 	blend.contents = contents;
 	blend.date = date;
 	blend.comments = [];
