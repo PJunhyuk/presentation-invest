@@ -19,9 +19,6 @@
 
                     var postdata = {
                         'user_name': $("#user_name").val(),
-                        'app_function1': $("input[name=app_function1]").is(":checked"),
-                        'app_function2': $("input[name=app_function2]").is(":checked"),
-                        'app_function3': $("input[name=app_function3]").is(":checked"),
                         'app_color': app_color,
                         'user_phone': $("#user_phone").val(),
                         'contents': contents
@@ -71,17 +68,6 @@
                     <tr>
                         <th>USER PHONE</th>
                         <td><input id='user_phone' class='user_phone' type='text' placeholder='Type here' /></td>
-                    </tr>
-                    <tr>
-                        <th>App Functions</th>
-                        <td class="app_functions">
-                            <input name="app_function1" id="app_function1" class="app_function" type="checkbox" checked />
-                            <label for="app_function1">function1</label>
-                            <input name="app_function2" id="app_function2" class="app_function" type="checkbox" />
-                            <label for="app_function2">function2</label>
-                            <input name="app_function3" id="app_function3" class="app_function" type="checkbox" />
-                            <label for="app_function3">function3</label>
-                        </td>
                     </tr>
                     <tr>
                         <th>App Main-color</th>
