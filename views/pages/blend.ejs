@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+        <script>
+            var write = null;
+
+            $(document).ready(function() {
+                //메모 쓰기 요청을 처리하는 부분입니다.
+                var write = function(contents) {
+                    var app_color;
+                    if ($("#app_color1").is(":checked"))
+                        app_color = 'color1';
+                    if ($("#app_color2").is(":checked"))
+                        app_color = 'color2';
+                    if ($("#app_color3").is(":checked"))
+                        app_color = 'color3';
+
+                    var postdata = {
+                        'app_title': $("#app_title").val(),
+                        'app_function1': $("input[name=app_function1]").is(":checked"),
+                        'app_function2': $("input[name=app_function2]").is(":checked"),
+                        'app_function3': $("input[name=app_function3]").is(":checked"),
+                        'app_color': app_color,
+                        'contents': contents
+                    };
+
+                    $.post('/write', postdata, function() {
+                        load();
+                    });
+
+                    alert("App created! (title : " + $("#app_title").val() + ")");
+                    alert("Check it at http://blenderkit.com/blended/list");
+                };
+
+                //화면 상단에서 새로운 메모를 작성하고 엔터키를 쳤을 때 쓰기 요청을 발생시키기 위한 부분입니다.
+                // $("#write textarea").keypress(function(evt) {
+                //     if ((evt.keyCode || evt.which) == 13) {
+                //         if (this.value != "") {
+                //             write(this.value);
+                //
+                //             evt.preventDefault();
+                //
+                //             $(this).val("");
+                //         }
+                //     }
+                // });
+
+                //쓰기 버튼을 눌렀을 때 쓰기 요청을 발생시키기 위한 부분입니다.
+                $("#write_button").click(function(evt) {
+                    write($("#write textarea").val());
+                });
+            });
+        </script>
+</head>
+
+<body id="page-top">
+    <header>
+        <div class="header-content">
+            <div id='main' class="header-content-inner">
+                <table id='write'>
+                    <tr>
+                        <th colspan="2">Blend your own app!</th>
+                    </tr>
+                    <tr>
+                        <th>App Title</th>
+                        <td><input id='app_title' class='app_title' type='text' placeholder='Type here' /></td>
+                    </tr>
+                    <tr>
+                        <th>App Functions</th>
+                        <td class="app_functions">
+                            <input name="app_function1" id="app_function1" class="app_function" type="checkbox" checked />
+                            <label for="app_function1">function1</label>
+                            <input name="app_function2" id="app_function2" class="app_function" type="checkbox" />
+                            <label for="app_function2">function2</label>
+                            <input name="app_function3" id="app_function3" class="app_function" type="checkbox" />
+                            <label for="app_function3">function3</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>App Main-color</th>
+                        <td class="app_colors">
+                            <input name="app_color" id="app_color1" type="radio" value="color1" checked />
+                            <label for="app_color1"></label>
+                            <input name="app_color" id="app_color2" type="radio" value="color2" />
+                            <label for="app_color2"></label>
+                            <input name="app_color" id="app_color3" type="radio" value="color3" />
+                            <label for="app_color3"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>App Descriptions</th>
+                        <td>
+                            <textarea placeholder="descriptions about app"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input id='write_button' class="btn btn-primary btn-xl" type='button' value='BLEND!' />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </header>
+    <a href="../blended/list" class="btn btn-success btn-xl" id="go_to_list">See all blended list</a>
+    <% include ../partials/body_script %>
+</body>
+
+</html>
