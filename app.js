@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 
 var mongoose = require('mongoose');
 
-var blend = require('./routes/blend');
+var invest = require('./routes/invest');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -29,9 +29,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 
-app.get('/load', blend.load);
-app.post('/write', blend.write);
-app.post('/del', blend.del);
+app.get('/load', invest.load);
+app.post('/write', invest.write);
+app.post('/del', invest.del);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

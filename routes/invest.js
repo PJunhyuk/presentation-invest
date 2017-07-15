@@ -1,10 +1,10 @@
 var mongoose = require('mongoose');
 
-var db = mongoose.connect('mongodb://localhost/rst_blend');
+var db = mongoose.connect('mongodb://localhost/rst_invest');
 var Schema = mongoose.Schema;
 
 //메모 모델을 정의합니다.
-var Blend = new Schema({
+var Invest = new Schema({
 	user_name: String,
 	user_phone: String,
 	user_invest1: Number,
@@ -16,7 +16,7 @@ var Blend = new Schema({
 	date: Date
 });
 
-var blendModel = mongoose.model('Blend', Blend);
+var investModel = mongoose.model('Invest', Invest);
 
 exports.index = function(req, res){
 	res.render('index', { title: 'Express' });
@@ -24,7 +24,7 @@ exports.index = function(req, res){
 
 //모든 메모 목록을 반환합니다.
 exports.load = function(req, res) {
-	blendModel.find({}, function(err, data) {
+	investModel.find({}, function(err, data) {
 		console.log(data);
 
 		res.json(data);
@@ -44,20 +44,20 @@ exports.write = function(req, res) {
 	var contents = req.body.contents;
 	var date = Date.now();
 
-	var blend = new blendModel();
+	var invest = new investModel();
 
-	blend.user_name = user_name;
-	blend.user_phone = user_phone;
-	blend.user_invest1 = user_invest1;
-	blend.user_invest2 = user_invest2;
-	blend.user_invest3 = user_invest3;
-	blend.user_invest4 = user_invest4;
-	blend.user_invest5 = user_invest5;
-	blend.contents = contents;
-	blend.date = date;
-	blend.comments = [];
+	invest.user_name = user_name;
+	invest.user_phone = user_phone;
+	invest.user_invest1 = user_invest1;
+	invest.user_invest2 = user_invest2;
+	invest.user_invest3 = user_invest3;
+	invest.user_invest4 = user_invest4;
+	invest.user_invest5 = user_invest5;
+	invest.contents = contents;
+	invest.date = date;
+	invest.comments = [];
 
-	blend.save(function (err) {
+	invest.save(function (err) {
 		if (err) {
 			throw err;
 		}
@@ -71,7 +71,7 @@ exports.write = function(req, res) {
 exports.del = function(req, res) {
 	var _id = req.body._id;
 
-	blendModel.remove({_id: _id}, function(err, result) {
+	investModel.remove({_id: _id}, function(err, result) {
 		if (err) {
 			throw err;
 		}
