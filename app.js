@@ -30,7 +30,8 @@ app.use('/', index);
 app.use('/users', users);
 
 app.get('/load', invest.load);
-app.post('/write', invest.write);
+app.post('/login', invest.login);
+app.post('/invest', invest.invest);
 app.post('/del', invest.del);
 
 // catch 404 and forward to error handler

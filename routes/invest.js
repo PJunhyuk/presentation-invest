@@ -32,7 +32,26 @@ exports.load = function(req, res) {
 };
 
 //메모 쓰기 요청을 처리합니다.
-exports.write = function(req, res) {
+exports.login = function(req, res) {
+	var user_name = req.body.user_name;
+	var user_phone = req.body.user_phone;
+
+	var login = new loginModel();
+
+	login.user_name = user_name;
+	login.user_phone = user_phone;
+
+	login.save(function (err) {
+		if (err) {
+			throw err;
+		}
+		else {
+			res.json({status: "SUCCESS"});
+		}
+	});
+};
+
+exports.invest = function(req, res) {
 	var user_name = req.body.user_name;
 	var user_phone = req.body.user_phone;
 	var user_invest1 = req.body.user_invest1;
