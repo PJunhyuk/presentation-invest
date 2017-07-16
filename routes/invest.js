@@ -12,7 +12,6 @@ var Invest = new Schema({
 	user_invest3: Number,
 	user_invest4: Number,
 	user_invest5: Number,
-	contents: String,
 	date: Date
 });
 
@@ -60,7 +59,6 @@ exports.invest = function(req, res) {
 	var user_invest4 = req.body.user_invest4;
 	var user_invest5 = req.body.user_invest5;
 
-	var contents = req.body.contents;
 	var date = Date.now();
 
 	var invest = new investModel();
@@ -72,7 +70,6 @@ exports.invest = function(req, res) {
 	invest.user_invest3 = user_invest3;
 	invest.user_invest4 = user_invest4;
 	invest.user_invest5 = user_invest5;
-	invest.contents = contents;
 	invest.date = date;
 	invest.comments = [];
 
