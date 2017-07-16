@@ -84,6 +84,7 @@
                                         } else {
                                             alert("투표 완료! " + $("#user_name").val() + " 님 감사합니다");
                                             write($("#write textarea").val());
+                                            location.reload();
                                         }
                                     }
                                 });
@@ -95,49 +96,61 @@
         </script>
 </head>
 
-<body id="page-top">
+<body style="background-color:#333333">
     <header>
         <div class="header-content">
             <div id='main' class="header-content-inner">
-                <table id='login'>
-                    <tr>
-                        <th colspan="2">LOGIN</th>
+                <table id="table-login">
+                    <tr class="tr-mainimage">
+                        <td colspan="2"><img src="http://via.placeholder.com/300x300"></td>
                     </tr>
                     <tr>
-                        <th>USER NAME</th>
-                        <td><input id='user_name' class='user_name login' type='text' placeholder='Type here' /></td>
+                        <th width="40px"><img src="http://via.placeholder.com/50x50"></th>
+                        <td width="200px"><input id='user_name' class='user_name login' type='text' placeholder='이름을 입력하세요' /></td>
+                    </tr>
+                    <tr style="height: 5px">
                     </tr>
                     <tr>
-                        <th>USER PHONE</th>
-                        <td><input id='user_phone' class='user_phone login' type='text' placeholder='Type here' /></td>
+                        <th><img src="http://via.placeholder.com/50x50"></th>
+                        <td><input id='user_phone' class='user_phone login' type='text' placeholder='휴대폰 번호를 입력하세요(- 포함)' /></td>
+                    </tr>
+                    <tr style="height: 15px">
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <input id='login_button' class="btn btn-primary btn-xl" type='button' value='로그인' />
+                            <input id='login_button' class="btn-primary" type='button' value='로그인' />
+                        </td>
+                    </tr> 
+                </table>
+                 <table id="table-invest" class="login-need">
+                    <tr class="tr-invest">
+                        <th width="160px">1. 밥먹자</th>
+                        <td width="80px"><input id='user_invest1' class='user_invest' type='text' placeholder='투자금' /></td>
+                    </tr>
+                    <tr class="tr-invest">
+                        <th>2. 피엠(PM)</th>
+                        <td><input id='user_invest2' class='user_invest' type='text' placeholder='투자금' /></td>
+                    </tr>
+                    <tr class="tr-invest">
+                        <th>3. FITEEN</th>
+                        <td><input id='user_invest3' class='user_invest' type='text' placeholder='투자금' /></td>
+                    </tr>
+                    <tr class="tr-invest">
+                        <th>4. Peopet</th>
+                        <td><input id='user_invest4' class='user_invest' type='text' placeholder='투자금' /></td>
+                    </tr>
+                    <tr class="tr-invest">
+                        <th>5. 플라시보 미트</th>
+                        <td><input id='user_invest5' class='user_invest' type='text' placeholder='투자금' /></td>
+                    </tr>
+                    <tr style="height: 15px">
+                    </tr>
+                    <tr class="login-need">
+                        <td colspan="2">
+                            <input id='invest_button' class="btn-success" type='button' value='투자' />
                         </td>
                     </tr>
-                    <div>
-                        <tr class="login-need">
-                            <th>USER INVEST</th>
-                            <td><input id='user_invest1' class='user_invest' type='text' placeholder='Type here' /></td>
-                            <td><input id='user_invest2' class='user_invest' type='text' placeholder='Type here' /></td>
-                            <td><input id='user_invest3' class='user_invest' type='text' placeholder='Type here' /></td>
-                            <td><input id='user_invest4' class='user_invest' type='text' placeholder='Type here' /></td>
-                            <td><input id='user_invest5' class='user_invest' type='text' placeholder='Type here' /></td>
-                        </tr>
-                        <tr class="login-need">
-                            <th>USER NOTES</th>
-                            <td>
-                                <textarea placeholder="descriptions about app"></textarea>
-                            </td>
-                        </tr>
-                        <tr class="login-need">
-                            <td colspan="2">
-                                <input id='invest_button' class="btn btn-primary btn-xl" type='button' value='투자' />
-                            </td>
-                        </tr>
-                    </div>
-                </table>
+                </table> 
             </div>
         </div>
     </header>
