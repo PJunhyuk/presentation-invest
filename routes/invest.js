@@ -71,7 +71,6 @@ exports.invest = function(req, res) {
 	invest.user_invest4 = user_invest4;
 	invest.user_invest5 = user_invest5;
 	invest.date = date;
-	invest.comments = [];
 
 	invest.save(function (err) {
 		if (err) {
