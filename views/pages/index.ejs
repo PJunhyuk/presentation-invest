@@ -35,8 +35,6 @@
             $.post('/invest', postdata, function() {
                 // load();
             });
-
-            console.log("hihi~");
         };
         
         //쓰기 버튼을 눌렀을 때 쓰기 요청을 발생시키기 위한 부분입니다.
@@ -70,8 +68,6 @@
                                 } else {
                                     alert("투표 완료! " + $("#user_name").val() + " 님 감사합니다");
                                     write();
-                                    console.log("write complete!");
-                                    // location.reload();
                                 }
                             }
                         });
@@ -79,6 +75,8 @@
                 });
             }
         });
+
+        location.reload();
     });
 </script>
 
