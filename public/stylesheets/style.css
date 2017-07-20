@@ -80,3 +80,8 @@ table {
   background-color: #666666;
   text-indent: 10px;
 }
+
+.modal-body pre {
+  color: red;
+  text-align: left;
+}

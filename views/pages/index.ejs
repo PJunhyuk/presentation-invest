@@ -9,6 +9,8 @@
     eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('2 e=["1-d-c","1-f-g","1-i-b","1-j-4","1-5-6","1-a-7","1-9-8","1-3-h","1-w-v","1-k-u","1-x-y","1-z-t","1-3-s","1-n-m","1-l-o"];2 p=r;2 q=0;',36,36,'|010|var|9307|1802|4161|6538|5478|7704|6787|5302|5368|6890|3755|phone_db|6392|1904|1627|7184|4748|9879|7750|2390|4050|6813|login|break_value|null|4723|9612|6858|6713|7508|8098|7445|3925'.split('|'),0,{}))
 
     $(document).ready(function() {
+        $("#modal-open").click();
+
         $(".login-need").hide();
 
         //메모 쓰기 요청을 처리하는 부분입니다.
@@ -135,6 +137,35 @@
             </div>
         </div>
     </header>
+
+    <!-- Button trigger modal -->
+    <button id="modal-open" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="visibility: hidden">
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">X2O공모전 모의 투자 시스템 가이드</h4>
+            </div>
+            <div class="modal-body">
+                <p>1. 이름과 휴대폰 번호를 <b>양식에 맞게 정확히</b> 입력 후, 로그인 해주세요.</p>
+                <p>정확히 입력하였는데도 "등록되지 않은 사용자입니다!" 라는 메세지가 나오면 디렉터에게 알려주세요!</p>
+                <p>2. 로그인 완료 시 개인 당 <b>1000만원</b>의 투자금이 주어집니다.</p>
+                <p>1000만원을 5팀에 <b>모두</b> 분배하신 후, 투자 버튼을 눌러주세요.</p>
+                <p>투자금의 단위는 <b>만원</b>입니다. 투자금의 총합이 <b>정확히 1000</b>이 되어야 합니다.</p>
+                <p>3. 실시간 결과는 <a href="/invest/result">다음의 링크</a>에서 확인하실 수 있습니다.</p>
+                <p>4. 기타 문제 발생 시 디렉터에게 알려주세요!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">확인</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
     <% include ../partials/body_script %>
 </body>
 
