@@ -66,8 +66,9 @@
                                 if ($("#user_invest1").val() * 1 < 0 || $("#user_invest2").val() * 1 < 0 || $("#user_invest3").val() * 1 < 0 || $("#user_invest4").val() * 1 < 0 || $("#user_invest5").val() * 1 < 0) {
                                     alert("에러! 음수 값은 입력할 수 없습니다.");
                                 } else {
-                                    alert("투표 완료! " + $("#user_name").val() + " 님 감사합니다");
                                     write();
+                                    alert("투표 완료! " + $("#user_name").val() + " 님 감사합니다");
+                                    location.reload();
                                 }
                             }
                         });
@@ -75,8 +76,6 @@
                 });
             }
         });
-
-        location.reload();
     });
 </script>
 
