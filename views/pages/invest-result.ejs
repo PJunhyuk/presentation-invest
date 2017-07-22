@@ -13,6 +13,8 @@
             var user_invest4_total = 0;
             var user_invest5_total = 0;
 
+            var user_invest_number = 0;
+
             $(document).ready(function() {
                 //작성된 메모 목록을 로드합니다.
                 $.get('/load', function(data) {
@@ -24,21 +26,15 @@
                         user_invest3_total = user_invest3_total + this.user_invest3;
                         user_invest4_total = user_invest4_total + this.user_invest4;
                         user_invest5_total = user_invest5_total + this.user_invest5;
+                        user_invest_number = user_invest_number + 1;
                     });
-
-                    // $("#result").prepend("<div class='item'></div>");
-                    // $("#result .item:first").append("<p>" + user_invest1_total + "</p>");
-                    // $("#result .item:first").append("<p>" + user_invest2_total + "</p>");
-                    // $("#result .item:first").append("<p>" + user_invest3_total + "</p>");
-                    // $("#result .item:first").append("<p>" + user_invest4_total + "</p>");
-                    // $("#result .item:first").append("<p>" + user_invest5_total + "</p>");
 
                     var ctx = document.getElementById("myChart");
 
                     var myChart = new Chart(ctx, {
                         type: 'bar',
                         data: {
-                            labels: ["TEAM 1", "TEAM 2", "TEAM 3", "TEAM 4", "TEAM 5"],
+                            labels: ["1. FITEEN", "2. 피엠(PM)", "3. 플라시보미트", "4. PEOPET", "5. 스토리다이닝"],
                             datasets: [{
                                 label: '# of Votes',
                                 data: [user_invest1_total, user_invest2_total, user_invest3_total, user_invest4_total, user_invest5_total],
@@ -70,6 +66,7 @@
                         }
                     });
 
+                    $("#invest-number").append("<p style=''>현재까지 투표한 총 인원 수는 <b>" + user_invest_number + "</b> 명 입니다.</p>");
 
                 });
 
@@ -84,6 +81,8 @@
     <div id='result'>
         <div class='item'>
         </div>
+    </div>
+    <div id="invest-number" style="margin-top: 30px; text-indent: 15px;">
     </div>
     <canvas id="myChart"></canvas>
     <% include ../partials/body_script %>
